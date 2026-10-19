@@ -1,0 +1,17 @@
+HIDROSA — PUBLICAR EN INTERNET SIN EXE
+
+Tu programa no necesita convertirse a HTML para publicarse con un enlace.
+
+1. Extrae este ZIP.
+2. Inicia sesión en https://github.com y crea un repositorio nuevo llamado hidrosa-uncp.
+3. En el repositorio selecciona Add file > Upload files.
+4. Arrastra TODOS los archivos y carpetas extraídos de este ZIP (no subas el ZIP como único archivo).
+5. Pulsa Commit changes.
+6. Abre https://share.streamlit.io e inicia sesión con GitHub.
+7. Create app > Yup, I have an app. Elige el repositorio hidrosa-uncp, la rama main y app.py como archivo principal.
+8. Pulsa Deploy y, al terminar, copia la dirección terminada en .streamlit.app.
+
+Ese enlace lo pueden abrir tus docentes en el navegador sin instalar ningún ejecutable.
+Para generar reportes, usa Descargar reporte en PDF en HIDROSA.
+
+NOTA: este ZIP NO es una dirección web activa. Para crearla necesitas subir los archivos a tu repositorio y desplegarlos desde tu cuenta.
