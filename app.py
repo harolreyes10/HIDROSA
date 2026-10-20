@@ -678,6 +678,10 @@ with izq:
     if modulo == "compuesta":
         tipo = "Sección compuesta"
         modo_ing = st.segmented_control("Construcción del perfil", ["Por tramos (rectas, arcos y parábolas)", "Por coordenadas (X, Y)"], default="Por tramos (rectas, arcos y parábolas)")
+        # En Streamlit Cloud el selector puede devolver None antes de la primera interacción.
+        # Conservar el valor predeterminado sin alterar los métodos ni las fórmulas hidráulicas.
+        if modo_ing is None:
+            modo_ing = "Por tramos (rectas, arcos y parábolas)"
     else:
         tipo = st.selectbox("Sección transversal", ["Rectangular", "Trapezoidal", "Triangular"] if modulo == "diseno" else
                             ["Rectangular", "Trapezoidal", "Triangular", "Circular", "Parabólica", "Por coordenadas (X, Y)", "Por ángulos y tramos"], key="tipo_seccion")
