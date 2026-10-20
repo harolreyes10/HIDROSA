@@ -198,6 +198,50 @@ table.cw tr.sel td{background:#E7F5F6;font-weight:700}
 .stApp button:focus-visible,
 .stApp input:focus-visible {outline:2px solid #12A5B2!important;outline-offset:2px;}
 
+/* HIDROSA - CAMPOS NUMERICOS CLAROS */
+
+/* Campos para ingresar valores */
+.stApp [data-testid="stNumberInput"] input,
+.stApp [data-testid="stTextInput"] input,
+.stApp [data-testid="stTextArea"] textarea {
+    background-color: #FFFFFF !important;
+    color: #102A43 !important;
+    -webkit-text-fill-color: #102A43 !important;
+    border-color: #CBD5E0 !important;
+    caret-color: #102A43 !important;
+}
+
+/* Contenedor de los campos */
+.stApp [data-testid="stNumberInput"] [data-baseweb="input"],
+.stApp [data-testid="stTextInput"] [data-baseweb="input"] {
+    background-color: #FFFFFF !important;
+    border-color: #CBD5E0 !important;
+}
+
+/* Botones de aumentar y disminuir */
+.stApp [data-testid="stNumberInput"] button {
+    background-color: #F1F5F9 !important;
+    color: #102A43 !important;
+    border-color: #CBD5E0 !important;
+}
+
+/* Iconos + y - */
+.stApp [data-testid="stNumberInput"] button svg {
+    color: #102A43 !important;
+    stroke: #102A43 !important;
+}
+
+/* Efecto al pasar el mouse */
+.stApp [data-testid="stNumberInput"] button:hover {
+    background-color: #DCE8F0 !important;
+}
+
+/* Campo seleccionado */
+.stApp [data-testid="stNumberInput"] input:focus,
+.stApp [data-testid="stTextInput"] input:focus {
+    border-color: #087E8B !important;
+    outline-color: #087E8B !important;
+}
 </style>'''
 
 
