@@ -86,6 +86,118 @@ table.cw tr.sel td{background:#E7F5F6;font-weight:700}
 [data-testid="stExpander"] details{background:white;border-color:#DCE6ED;border-radius:9px}
 .stPlotlyChart {border-radius:10px;overflow:hidden}
 @media(max-width: 800px){.hdr{padding:14px}.hdr .brand{font-size:19px}.hdr .version{display:none}}
+
+
+/* HIDROSA - Contraste coherente incluso cuando el navegador pide tema oscuro.
+   No modifica la posición de los controles ni la lógica de cálculo. */
+:root { color-scheme: light; }
+.stApp {background:#F3F7FA!important;color:#102A43!important;color-scheme:light;}
+
+/* Navegación superior: fondo oscuro, texto e iconos blancos. */
+.stApp [data-testid="stPopover"] > button {
+  background:#111820!important; color:#FFFFFF!important;
+  border:1px solid #344B5B!important;
+}
+.stApp [data-testid="stPopover"] > button *,
+.stApp [data-testid="stPopover"] > button p,
+.stApp [data-testid="stPopover"] > button svg {
+  color:#FFFFFF!important;
+}
+.stApp [data-testid="stPopover"] > button:hover {
+  background:#17475A!important; border-color:#19A6B0!important;
+}
+
+/* Botones estándar, incluida la opción Inicio cuando no está seleccionada. */
+.stApp [data-testid="stButton"] button[kind="secondary"],
+.stApp [data-testid="stDownloadButton"] button {
+  background:#FFFFFF!important; color:#14364C!important;
+  border:1px solid #C8D9E2!important;
+}
+.stApp [data-testid="stButton"] button[kind="secondary"] *,
+.stApp [data-testid="stDownloadButton"] button * {color:#14364C!important;}
+.stApp [data-testid="stButton"] button[kind="secondary"]:hover,
+.stApp [data-testid="stDownloadButton"] button:hover {
+  background:#E6F5F7!important; border-color:#087E8B!important;
+}
+.stApp [class*="st-key-nav_home"] button,
+.stApp [class*="st-key-nav_home"] button:hover {
+  background:#111820!important;color:#FFFFFF!important;
+  border-color:#344B5B!important;
+}
+.stApp [class*="st-key-nav_home"] button * {color:#FFFFFF!important;}
+
+/* Materiales y otras opciones radio: texto siempre oscuro y visible. */
+.stApp [data-testid="stRadio"] [role="radiogroup"] label,
+.stApp [data-testid="stRadio"] [role="radiogroup"] label *,
+.stApp [data-testid="stCheckbox"] label,
+.stApp [data-testid="stCheckbox"] label * {
+  color:#17384D!important;
+}
+.stApp [data-testid="stRadio"] [role="radiogroup"] label:hover,
+.stApp [data-testid="stCheckbox"] label:hover {color:#087E8B!important;}
+
+/* Listas desplegables: superficie blanca y valores legibles, incluido el menú. */
+.stApp [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.stApp [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+  background:#FFFFFF!important; border-color:#B5CDD9!important;
+}
+.stApp [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+  color:#102A43!important;
+}
+.stApp [data-testid="stSelectbox"] [data-baseweb="select"] input,
+.stApp [data-testid="stMultiSelect"] [data-baseweb="select"] input {
+  color:#102A43!important;caret-color:#087E8B!important;
+}
+[data-baseweb="popover"] [role="listbox"],
+[data-baseweb="popover"] [role="option"] {
+  background:#FFFFFF!important;color:#102A43!important;
+}
+[data-baseweb="popover"] [role="option"] * {color:#102A43!important;}
+[data-baseweb="popover"] [role="option"]:hover,
+[data-baseweb="popover"] [role="option"][aria-selected="true"] {
+  background:#E4F4F6!important;
+}
+
+/* Alternador 'Por tramos / Por coordenadas' y demás controles segmentados. */
+.stApp [data-testid="stSegmentedControl"] button {
+  background:#FFFFFF!important;color:#17384D!important;
+  border-color:#C0D6E0!important;
+}
+.stApp [data-testid="stSegmentedControl"] button * {color:inherit!important;}
+.stApp [data-testid="stSegmentedControl"] button[aria-pressed="true"],
+.stApp [data-testid="stSegmentedControl"] button[aria-checked="true"],
+.stApp [data-testid="stSegmentedControl"] button[data-state="active"] {
+  background:#087E8B!important;color:#FFFFFF!important;
+  border-color:#087E8B!important;
+}
+
+/* Campos numéricos: mantener el diseño oscuro original con texto blanco. */
+.stApp [data-testid="stNumberInput"] input {
+  background:#25262F!important;color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+}
+.stApp [data-testid="stNumberInput"] button {
+  background:#25262F!important;color:#FFFFFF!important;
+}
+.stApp [data-testid="stNumberInput"] button * {color:#FFFFFF!important;}
+
+/* Textos de ayuda, pestañas y paneles claros. */
+.stApp [data-testid="stWidgetLabel"] p {color:#294A60!important;}
+.stApp [data-testid="stCaptionContainer"] p {color:#587286!important;}
+.stApp [data-testid="stTabs"] button {color:#17384D!important;}
+.stApp [data-testid="stExpander"] summary,
+.stApp [data-testid="stExpander"] summary * {color:#17384D!important;}
+.stApp [data-testid="stTextInput"] input,
+.stApp [data-testid="stTextArea"] textarea {
+  background:#FFFFFF!important;color:#102A43!important;
+  -webkit-text-fill-color:#102A43!important;
+}
+
+/* Enlace de foco para navegación por teclado: visible en ambos fondos. */
+.stApp button:focus-visible,
+.stApp input:focus-visible {outline:2px solid #12A5B2!important;outline-offset:2px;}
+
 </style>'''
 
 
